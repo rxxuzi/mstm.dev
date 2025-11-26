@@ -1,0 +1,12 @@
+{
+  "title": "drum sys",
+  "description": "Browser-based drum machine with 808-style synthesizers. Features 16-step sequencer, adjustable BPM and swing, and WebM recording export. Built with Tone.js.",
+  "type": "tool",
+  "category": "audio",
+  "tags": ["music", "drums", "sequencer", "808", "trap", "synthesizer", "tone.js", "audio"],
+  "authors": ["rxxuzi"],
+  "featured": true,
+  "mobile": true,
+  "createdAt": "2025-11-26",
+  "license": "MIT"
+}

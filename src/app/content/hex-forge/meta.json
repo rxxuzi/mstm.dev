@@ -1,0 +1,12 @@
+{
+  "title": "Hex Forge",
+  "description": "Professional binary/hex editor in your browser. View and analyze files byte-by-byte with real-time inspector showing integer, float, and binary representations.",
+  "type": "tool",
+  "category": "development",
+  "tags": ["hex-editor", "binary", "file-analysis", "reverse-engineering"],
+  "authors": ["rxxuzi"],
+  "featured": true,
+  "mobile": false,
+  "createdAt": "2025-11-24",
+  "license": "MIT"
+}

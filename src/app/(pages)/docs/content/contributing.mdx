@@ -1,0 +1,136 @@
+# Contributing Guide
+
+Thank you for your interest in contributing to **mstm.dev**! This guide will help you add your own projects to the platform.
+
+## Quick Start
+
+### 1. Fork the Repository
+
+Visit [github.com/rxxuzi/mstm.dev](https://github.com/rxxuzi/mstm.dev) and click the **Fork** button.
+
+### 2. Clone Your Fork
+
+```bash
+git clone https://github.com/YOUR_USERNAME/mstm.dev.git
+cd mstm.dev
+npm install
+```
+
+### 3. Create Your Project
+
+```bash
+mkdir -p src/app/content/your-project-name
+cd src/app/content/your-project-name
+```
+
+Create two required files:
+- `meta.json` - Project metadata
+- `page.tsx` - Your project component
+
+### 4. Test Locally
+
+```bash
+npm run collect  # Validate metadata
+npm run dev      # Start dev server
+```
+
+Visit `http://localhost:3000/content/your-project-name` to test.
+
+### 5. Submit Pull Request
+
+```bash
+git checkout -b feature/your-project-name
+git add .
+git commit -m "feat(content): add your-project-name"
+git push origin feature/your-project-name
+```
+
+Open a pull request on GitHub with a clear description of your project.
+
+## Project Requirements
+
+### Required Files
+
+**meta.json** - Project metadata
+
+```json
+{
+  "title": "Your Project",
+  "description": "Brief description of what it does",
+  "type": "tool",
+  "category": "development",
+  "tags": ["tag1", "tag2", "tag3"],
+  "authors": ["your-github-username"],
+  "mobile": true,
+  "createdAt": "2025-11-26",
+  "license": "MIT"
+}
+```
+
+See the [Metadata Guide](/docs/metadata) for complete specification.
+
+**page.tsx** - React component
+
+```tsx
+'use client'
+
+export default function YourProject() {
+  return (
+    <div className="container mx-auto p-8">
+      <h1 className="text-3xl font-bold mb-4">Your Project</h1>
+      {/* Your implementation */}
+    </div>
+  )
+}
+```
+
+### Guidelines
+
+**Client-side only** - All projects run in the browser. No backend required.
+
+**Minimal dependencies** - Keep your project lightweight and fast.
+
+**Mobile-friendly** - Test on mobile devices if `mobile: true` in meta.json.
+
+**High quality** - Polish your work before submitting.
+
+**Well-documented** - Add comments to help others understand your code.
+
+## Project Types
+
+Choose the appropriate type for your project:
+
+- **tool** - Utilities, converters, editors, analyzers
+- **game** - Interactive games and puzzles
+- **art** - Visual experiments, generative art
+- **other** - Educational, experimental, demos
+
+## Naming Rules
+
+Project names (slugs) must:
+- Use kebab-case (lowercase with hyphens)
+- Be at least 2 characters
+- Not conflict with reserved routes
+- Be descriptive and unique
+
+Reserved names include: `about`, `browse`, `contribute`, `docs`, `explore`, `privacy`, etc.
+
+## Review Process
+
+Pull requests are reviewed for:
+- **Code quality** - Clean, readable, well-structured
+- **Functionality** - Works as described, no bugs
+- **Design** - Good user experience
+- **Performance** - Optimized and responsive
+- **Guidelines** - Follows platform standards
+
+## Need Help?
+
+- Check the [Metadata Guide](/docs/metadata) for meta.json specification
+- Read the [Styling Guide](/docs/styling) for design patterns
+- Review existing projects on [Browse](/browse) for examples
+- Open an issue on [GitHub](https://github.com/rxxuzi/mstm.dev/issues)
+
+---
+
+**Ready to contribute?** Fork the repo and start building!

@@ -1,0 +1,187 @@
+[
+  {
+    "slug": "assembler",
+    "title": "8bit Assembler",
+    "description": "Assembly language simulator with step-by-step execution, register visualization, and memory inspection. Write and debug assembly code in your browser.",
+    "type": "tool",
+    "category": "simulator",
+    "tags": [
+      "assembly",
+      "simulator",
+      "cpu",
+      "8bit",
+      "programming",
+      "low-level"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": false,
+    "mobile": false,
+    "createdAt": "2025-11-26",
+    "license": "MIT",
+    "path": "/assembler"
+  },
+  {
+    "slug": "drum-sys",
+    "title": "drum sys",
+    "description": "Browser-based drum machine with 808-style synthesizers. Features 16-step sequencer, adjustable BPM and swing, and WebM recording export. Built with Tone.js.",
+    "type": "tool",
+    "category": "audio",
+    "tags": [
+      "music",
+      "drums",
+      "sequencer",
+      "808",
+      "trap",
+      "synthesizer",
+      "tone.js",
+      "audio"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": true,
+    "mobile": true,
+    "createdAt": "2025-11-26",
+    "license": "MIT",
+    "path": "/drum-sys"
+  },
+  {
+    "slug": "hex-forge",
+    "title": "Hex Forge",
+    "description": "Professional binary/hex editor in your browser. View and analyze files byte-by-byte with real-time inspector showing integer, float, and binary representations.",
+    "type": "tool",
+    "category": "development",
+    "tags": [
+      "hex-editor",
+      "binary",
+      "file-analysis",
+      "reverse-engineering"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": true,
+    "mobile": false,
+    "createdAt": "2025-11-24",
+    "license": "MIT",
+    "path": "/hex-forge"
+  },
+  {
+    "slug": "jackson-pollock",
+    "title": "jackson-pollock",
+    "description": "Experimental drip painting canvas inspired by Jackson Pollock. Slow movements create thick strokes, fast movements create thin lines. Holding still causes ink to pool and bleed organically. Features customizable brush size, ink flow, and color palette.",
+    "type": "art",
+    "category": "creative",
+    "tags": [
+      "art",
+      "painting",
+      "generative",
+      "abstract",
+      "expressionism",
+      "drip",
+      "canvas",
+      "experimental"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": true,
+    "mobile": true,
+    "createdAt": "2025-11-26",
+    "license": "MIT",
+    "path": "/jackson-pollock"
+  },
+  {
+    "slug": "logic-gate",
+    "title": "Logic Gate",
+    "description": "Build logic circuits to match target binary outputs. Chain AND, OR, XOR, NAND, NOR, and NOT gates to transform inputs. Features three difficulty levels with increasingly complex circuits.",
+    "type": "game",
+    "category": "puzzle",
+    "tags": [
+      "logic",
+      "puzzle",
+      "circuit",
+      "binary",
+      "gates",
+      "programming",
+      "boolean"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": true,
+    "mobile": true,
+    "createdAt": "2025-11-25",
+    "license": "MIT",
+    "path": "/logic-gate"
+  },
+  {
+    "slug": "queens",
+    "title": "Queens",
+    "description": "Modern N-Queens puzzle game. Place queens in each region, row, column, and diagonal without conflicts. Choose from 5×5, 7×7, or 9×9 grids.",
+    "type": "game",
+    "category": "puzzle",
+    "tags": [
+      "puzzle",
+      "logic",
+      "n-queens",
+      "chess",
+      "brain-teaser"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": true,
+    "mobile": true,
+    "createdAt": "2025-11-23",
+    "license": "MIT",
+    "path": "/queens"
+  },
+  {
+    "slug": "slitherlink",
+    "title": "Slitherlink",
+    "description": "Draw a single continuous loop on a grid following number clues. Each number indicates how many edges surround that cell. Features multiple grid sizes and difficulty levels.",
+    "type": "game",
+    "category": "puzzle",
+    "tags": [
+      "puzzle",
+      "logic",
+      "loop",
+      "nikoli",
+      "pen-puzzle",
+      "brain-teaser"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": true,
+    "mobile": true,
+    "createdAt": "2025-11-25",
+    "license": "MIT",
+    "path": "/slitherlink"
+  },
+  {
+    "slug": "web-py",
+    "title": "web.py",
+    "description": "Run Python code directly in your browser with Pyodide. Interactive Python REPL with syntax highlighting and instant execution.",
+    "type": "tool",
+    "category": "development",
+    "tags": [
+      "python",
+      "repl",
+      "browser",
+      "pyodide",
+      "code-editor"
+    ],
+    "authors": [
+      "rxxuzi"
+    ],
+    "featured": true,
+    "mobile": false,
+    "createdAt": "2025-11-22",
+    "license": "MIT",
+    "path": "/web-py"
+  }
+]

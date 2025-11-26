@@ -1,0 +1,345 @@
+# Styling Guide
+
+Learn how to style your projects on **mstm.dev** using Tailwind CSS.
+
+## Overview
+
+All projects on **mstm.dev** use **Tailwind CSS v4** for styling. This provides:
+- Utility-first CSS classes
+- Consistent design system
+- Dark mode support
+- Responsive design utilities
+
+## Basic Usage
+
+Apply utility classes directly to elements:
+
+```tsx
+<div className="bg-black text-white p-8 rounded-lg">
+  <h1 className="text-3xl font-bold mb-4">Hello World</h1>
+  <p className="opacity-80">Welcome to my project.</p>
+</div>
+```
+
+## Common Utilities
+
+### Layout
+
+```tsx
+<div className="flex items-center justify-between">
+  <div className="flex-1">Content</div>
+  <div className="w-64">Sidebar</div>
+</div>
+```
+
+### Spacing
+
+```tsx
+<div className="p-4">Padding: 1rem</div>
+<div className="m-8">Margin: 2rem</div>
+<div className="space-y-4">Vertical spacing between children</div>
+```
+
+### Typography
+
+```tsx
+<h1 className="text-4xl font-bold">Large heading</h1>
+<p className="text-base opacity-70">Body text</p>
+<code className="font-mono text-sm">Code</code>
+```
+
+### Colors
+
+The platform uses a dark theme. Key colors:
+
+```tsx
+<div className="bg-black text-white">Default background</div>
+<div className="bg-mstm text-black">Accent color (mstm green)</div>
+<div className="border border-white/10">Subtle border</div>
+```
+
+## Design System
+
+### Colors
+
+- **Background:** `bg-black`
+- **Text:** `text-white`
+- **Accent:** `bg-mstm` (green: #39ff14)
+- **Borders:** `border-white/10` (subtle)
+- **Opacity:** `opacity-70`, `opacity-80` (muted text)
+
+### Fonts
+
+- **Sans:** Default font (Geist Sans)
+- **Serif:** `font-serif` (Geist Mono for headings)
+- **Mono:** `font-mono` (code blocks)
+
+### Spacing Scale
+
+Tailwind uses 0.25rem (4px) increments:
+- `p-1` = 0.25rem (4px)
+- `p-2` = 0.5rem (8px)
+- `p-4` = 1rem (16px)
+- `p-8` = 2rem (32px)
+
+## Responsive Design
+
+### Breakpoints
+
+```tsx
+<div className="w-full md:w-1/2 lg:w-1/3">
+  {/* Full width on mobile, half on tablet, third on desktop */}
+</div>
+```
+
+**Breakpoints:**
+- `sm:` - 640px and up
+- `md:` - 768px and up
+- `lg:` - 1024px and up
+- `xl:` - 1280px and up
+
+### Mobile-First
+
+Start with mobile styles, add larger breakpoints:
+
+```tsx
+<div className="text-sm md:text-base lg:text-lg">
+  Responsive text size
+</div>
+```
+
+## Interactive States
+
+### Hover
+
+```tsx
+<button className="bg-mstm hover:bg-mstm/80 transition-colors">
+  Hover me
+</button>
+```
+
+### Focus
+
+```tsx
+<input className="focus:ring-2 focus:ring-mstm" />
+```
+
+### Active
+
+```tsx
+<button className="active:scale-95 transition-transform">
+  Click me
+</button>
+```
+
+## Components
+
+### Buttons
+
+```tsx
+<button className="bg-mstm text-black px-6 py-2 rounded hover:bg-mstm/80 transition-colors">
+  Primary Button
+</button>
+
+<button className="border border-white/20 px-6 py-2 rounded hover:border-white/40 transition-colors">
+  Secondary Button
+</button>
+```
+
+### Cards
+
+```tsx
+<div className="border border-white/10 rounded-lg p-6 hover:border-mstm/50 transition-colors">
+  <h3 className="text-xl font-bold mb-2">Card Title</h3>
+  <p className="opacity-70">Card content</p>
+</div>
+```
+
+### Inputs
+
+```tsx
+<input
+  type="text"
+  className="bg-white/5 border border-white/10 rounded px-4 py-2 focus:border-mstm focus:outline-none"
+  placeholder="Enter text..."
+/>
+```
+
+## Layout Patterns
+
+### Container
+
+```tsx
+<div className="max-w-4xl mx-auto px-8 py-12">
+  {/* Centered content with max width */}
+</div>
+```
+
+### Grid
+
+```tsx
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+```
+
+### Flexbox
+
+```tsx
+<div className="flex flex-col md:flex-row gap-4">
+  <div className="flex-1">Main content</div>
+  <div className="w-full md:w-64">Sidebar</div>
+</div>
+```
+
+## Animations
+
+### Transitions
+
+```tsx
+<div className="transition-all duration-300 hover:scale-105">
+  Smooth scaling on hover
+</div>
+```
+
+### Opacity
+
+```tsx
+<div className="opacity-0 hover:opacity-100 transition-opacity">
+  Fade in on hover
+</div>
+```
+
+## Best Practices
+
+### Class Order
+
+Organize classes logically:
+1. Layout (flex, grid)
+2. Sizing (w-, h-)
+3. Spacing (p-, m-)
+4. Typography (text-, font-)
+5. Colors (bg-, text-)
+6. Effects (opacity-, shadow-)
+
+```tsx
+<div className="flex items-center w-full p-4 text-lg font-bold bg-black text-white opacity-80">
+  {/* Organized classes */}
+</div>
+```
+
+### Use Opacity for Muted Text
+
+```tsx
+<p className="opacity-70">Muted text</p>
+<p className="opacity-50">Very muted text</p>
+```
+
+### Consistent Borders
+
+```tsx
+<div className="border border-white/10">Subtle border</div>
+<div className="border border-white/20">Visible border</div>
+```
+
+### Smooth Transitions
+
+Always add transitions for interactive elements:
+
+```tsx
+<button className="bg-mstm hover:bg-mstm/80 transition-colors duration-200">
+  Button
+</button>
+```
+
+## Accessibility
+
+### Focus Styles
+
+Always provide visible focus indicators:
+
+```tsx
+<button className="focus:ring-2 focus:ring-mstm focus:outline-none">
+  Accessible button
+</button>
+```
+
+### Contrast
+
+Ensure sufficient contrast:
+- White text on black background: ✅ Good
+- Light gray on white: ❌ Poor contrast
+
+### Semantic HTML
+
+Use proper elements with Tailwind:
+
+```tsx
+<button className="...">Button</button>  {/* ✅ Good */}
+<div className="...">Button</div>        {/* ❌ Bad */}
+```
+
+## Custom Styles
+
+If Tailwind utilities aren't enough, use CSS modules or inline styles:
+
+```tsx
+<div
+  className="bg-black"
+  style={{
+    background: 'linear-gradient(to right, #000, #39ff14)'
+  }}
+>
+  Custom gradient
+</div>
+```
+
+## Dark Mode
+
+The platform enforces dark mode. All styles should work on dark backgrounds:
+
+```tsx
+{/* ✅ Good - works in dark mode */}
+<div className="bg-black text-white border border-white/10">
+  Content
+</div>
+
+{/* ❌ Bad - assumes light mode */}
+<div className="bg-white text-black">
+  Content
+</div>
+```
+
+## Performance
+
+### Avoid Inline Styles
+
+Prefer Tailwind classes over inline styles for better performance:
+
+```tsx
+{/* ✅ Good */}
+<div className="w-full h-64 bg-black" />
+
+{/* ❌ Less optimal */}
+<div style={{ width: '100%', height: '16rem', background: 'black' }} />
+```
+
+### Reuse Classes
+
+Extract repeated patterns into components:
+
+```tsx
+function Card({ children }) {
+  return (
+    <div className="border border-white/10 rounded-lg p-6 hover:border-mstm/50 transition-colors">
+      {children}
+    </div>
+  )
+}
+```
+
+---
+
+**Need inspiration?** Browse existing projects to see styling patterns in action.

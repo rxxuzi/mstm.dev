@@ -1,0 +1,245 @@
+# Quick Start
+
+Get your development environment set up and start contributing to **mstm.dev** in minutes.
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- **Node.js** 18.x or higher ([download](https://nodejs.org/))
+- **npm** 9.x or higher (comes with Node.js)
+- **Git** installed ([download](https://git-scm.com/))
+- A **GitHub account**
+- Code editor (VS Code recommended)
+
+Check your versions:
+
+```bash
+node --version  # Should be 18.x or higher
+npm --version   # Should be 9.x or higher
+```
+
+## Step 1: Fork and Clone
+
+### Fork the Repository
+
+1. Visit [github.com/rxxuzi/mstm.dev](https://github.com/rxxuzi/mstm.dev)
+2. Click the **Fork** button in the top right
+3. Wait for the fork to complete
+
+### Clone Your Fork
+
+```bash
+git clone https://github.com/YOUR_USERNAME/mstm.dev.git
+cd mstm.dev
+```
+
+### Add Upstream Remote
+
+```bash
+git remote add upstream https://github.com/rxxuzi/mstm.dev.git
+```
+
+This lets you sync with the main repository later.
+
+## Step 2: Install Dependencies
+
+```bash
+npm install
+```
+
+This installs all required packages including Next.js, React, TypeScript, and development tools.
+
+## Step 3: Generate Project Registry
+
+**Critical step** - the platform requires a metadata registry before it can run:
+
+```bash
+npm run collect
+```
+
+This script:
+- Scans `src/app/content/` for all projects
+- Validates each `meta.json` file
+- Generates `data/projects.json` registry
+
+If this doesn't run successfully, the build will fail.
+
+## Step 4: Start Development Server
+
+```bash
+npm run dev
+```
+
+The site will start at:
+- **Local:** `http://localhost:3000`
+- **Network:** Check console output for network URL
+
+Visit `http://localhost:3000` to see the platform running locally.
+
+## Verify Your Setup
+
+### Check the Site
+
+Open your browser and verify:
+- ✅ Homepage loads
+- ✅ Browse page shows projects
+- ✅ Explore page works
+- ✅ No console errors
+
+### Test a Project
+
+Visit any project, for example:
+- `http://localhost:3000/content/hex-forge`
+- `http://localhost:3000/content/queens`
+
+Make sure they load without errors.
+
+## Next Steps
+
+Now that your environment is set up, you can:
+
+### Create Your First Project
+
+1. Create a new directory in `src/app/content/`:
+   ```bash
+   mkdir src/app/content/my-project
+   ```
+
+2. Add `meta.json` and `page.tsx` files
+
+3. Run `npm run collect` to validate
+
+4. Test at `http://localhost:3000/content/my-project`
+
+See the [Contributing Guide](/docs/contributing) for detailed instructions.
+
+### Learn More
+
+- **[Metadata Guide](/docs/metadata)** - Learn about meta.json requirements
+- **[Styling Guide](/docs/styling)** - Style your project with Tailwind CSS
+- **[Contributing Guide](/docs/contributing)** - Complete contribution workflow
+
+## Common Commands
+
+### Development
+
+```bash
+npm run dev          # Start dev server (auto-runs collect first)
+```
+
+### Building
+
+```bash
+npm run build        # Production build
+npm start            # Start production server
+```
+
+### Quality Checks
+
+```bash
+npm run lint         # Run ESLint
+npm run collect      # Validate metadata
+```
+
+## Troubleshooting
+
+### "Cannot find module 'data/projects.json'"
+
+**Solution:** Run `npm run collect`
+
+This generates the required metadata registry.
+
+### Port 3000 Already in Use
+
+**Windows:**
+```bash
+netstat -ano | findstr :3000
+taskkill /PID <PID> /F
+```
+
+**Mac/Linux:**
+```bash
+lsof -ti:3000 | xargs kill -9
+```
+
+Or use a different port:
+```bash
+PORT=3001 npm run dev
+```
+
+### Module Not Found Errors
+
+**Solution:** Reinstall dependencies
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Build Succeeds But Site Broken
+
+**Solution:** Check for TypeScript/ESLint errors
+
+```bash
+npm run lint
+```
+
+Fix all errors before proceeding.
+
+## Detailed Documentation
+
+For comprehensive guides, see the **[GitHub documentation](https://github.com/rxxuzi/mstm.dev/tree/main/docs)**:
+
+- **[SETUP.md](https://github.com/rxxuzi/mstm.dev/blob/main/docs/SETUP.md)** - Complete environment setup
+- **[CODING-STANDARDS.md](https://github.com/rxxuzi/mstm.dev/blob/main/docs/CODING-STANDARDS.md)** - Code conventions
+- **[META-JSON.md](https://github.com/rxxuzi/mstm.dev/blob/main/docs/META-JSON.md)** - Metadata specification
+- **[COMMIT-GUIDELINES.md](https://github.com/rxxuzi/mstm.dev/blob/main/docs/COMMIT-GUIDELINES.md)** - Commit rules
+- **[BRANCH-STRATEGY.md](https://github.com/rxxuzi/mstm.dev/blob/main/docs/BRANCH-STRATEGY.md)** - Git workflow
+- **[PROJECT-STRUCTURE.md](https://github.com/rxxuzi/mstm.dev/blob/main/docs/PROJECT-STRUCTURE.md)** - Codebase structure
+- **[CONTRIBUTING.md](https://github.com/rxxuzi/mstm.dev/blob/main/docs/CONTRIBUTING.md)** - Contribution process
+
+## Development Workflow
+
+Once setup is complete, your typical workflow will be:
+
+1. **Create a branch**
+   ```bash
+   git checkout -b feature/my-project
+   ```
+
+2. **Make changes**
+   - Edit files
+   - Add features
+   - Test locally
+
+3. **Validate**
+   ```bash
+   npm run lint
+   npm run collect
+   ```
+
+4. **Commit**
+   ```bash
+   git add .
+   git commit -m "feat(content): add my-project"
+   ```
+
+5. **Push and create PR**
+   ```bash
+   git push origin feature/my-project
+   ```
+
+See the [Contributing Guide](/docs/contributing) for the complete submission process.
+
+## Getting Help
+
+Need assistance?
+
+- **Issues:** [GitHub Issues](https://github.com/rxxuzi/mstm.dev/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/rxxuzi/mstm.dev/discussions)
+- **Docs:** Browse this documentation site
+
+---
+
+**Setup complete?** Head to the [Contributing Guide](/docs/contributing) to start building!

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "content",
+    "color": "54e1e8",
+    "description": "New content project"
+  },
+  {
+    "name": "feature",
+    "color": "a2eeef",
+    "description": "New platform feature"
+  },
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something isn't working"
+  },
+  {
+    "name": "docs",
+    "color": "0075ca",
+    "description": "Documentation improvements"
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "Platform improvement"
+  },
+  {
+    "name": "good first issue",
+    "color": "7057ff",
+    "description": "Good for newcomers"
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "Extra attention needed"
+  },
+  {
+    "name": "priority: high",
+    "color": "d93f0b",
+    "description": "High priority"
+  },
+  {
+    "name": "priority: low",
+    "color": "e99695",
+    "description": "Low priority"
+  },
+  {
+    "name": "wip",
+    "color": "fbca04",
+    "description": "Work in progress"
+  }
+]

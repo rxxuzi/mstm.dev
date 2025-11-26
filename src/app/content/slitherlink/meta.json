@@ -1,0 +1,12 @@
+{
+  "title": "Slitherlink",
+  "description": "Draw a single continuous loop on a grid following number clues. Each number indicates how many edges surround that cell. Features multiple grid sizes and difficulty levels.",
+  "type": "game",
+  "category": "puzzle",
+  "tags": ["puzzle", "logic", "loop", "nikoli", "pen-puzzle", "brain-teaser"],
+  "authors": ["rxxuzi"],
+  "featured": true,
+  "mobile": true,
+  "createdAt": "2025-11-25",
+  "license": "MIT"
+}

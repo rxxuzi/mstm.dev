@@ -1,0 +1,159 @@
+/* Tool Container */
+.tool-container {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tool Header */
+.tool-header {
+    padding: var(--space-lg) var(--space-xl);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tool-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+/* Tool Buttons */
+.tool-button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tool-button:hover:not(:disabled) {
+    filter: brightness(0.9);
+    transform: translateY(-1px);
+}
+
+.tool-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tool-button-outline {
+    background: transparent;
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tool-button-outline:hover {
+    background: var(--surface);
+}
+
+/* Tool Inputs */
+.tool-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--foreground);
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.tool-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+/* Tool Cards */
+.tool-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+}
+
+/* Loading States */
+.tool-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    min-height: 60vh;
+}
+
+.tool-spinner {
+    width: 64px;
+    height: 64px;
+    border: 4px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: tool-spin 1s linear infinite;
+}
+
+@keyframes tool-spin {
+    to { transform: rotate(360deg); }
+}
+
+.tool-loading-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tool-loading-subtext {
+    font-size: 0.875rem;
+    opacity: 0.6;
+    text-align: center;
+}
+
+/* Progress Bar */
+.tool-progress-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.tool-progress-bar {
+    height: 6px;
+    background: var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.tool-progress-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+/* Footer */
+.tool-footer {
+    padding: var(--space-lg) var(--space-xl);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    font-size: 0.75rem;
+    opacity: 0.4;
+    letter-spacing: 0.02em;
+}

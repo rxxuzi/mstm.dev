@@ -1,0 +1,12 @@
+{
+  "title": "Queens",
+  "description": "Modern N-Queens puzzle game. Place queens in each region, row, column, and diagonal without conflicts. Choose from 5×5, 7×7, or 9×9 grids.",
+  "type": "game",
+  "category": "puzzle",
+  "tags": ["puzzle", "logic", "n-queens", "chess", "brain-teaser"],
+  "authors": ["rxxuzi"],
+  "featured": true,
+  "mobile": true,
+  "createdAt": "2025-11-23",
+  "license": "MIT"
+}

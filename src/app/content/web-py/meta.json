@@ -1,0 +1,12 @@
+{
+  "title": "web.py",
+  "description": "Run Python code directly in your browser with Pyodide. Interactive Python REPL with syntax highlighting and instant execution.",
+  "type": "tool",
+  "category": "development",
+  "tags": ["python", "repl", "browser", "pyodide", "code-editor"],
+  "authors": ["rxxuzi"],
+  "featured": true,
+  "mobile": false,
+  "createdAt": "2025-11-22",
+  "license": "MIT"
+}

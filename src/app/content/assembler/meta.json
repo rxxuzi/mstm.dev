@@ -1,0 +1,12 @@
+{
+  "title": "8bit Assembler",
+  "description": "Assembly language simulator with step-by-step execution, register visualization, and memory inspection. Write and debug assembly code in your browser.",
+  "type": "tool",
+  "category": "simulator",
+  "tags": ["assembly", "simulator", "cpu", "8bit", "programming", "low-level"],
+  "authors": ["rxxuzi"],
+  "featured": false,
+  "mobile": false,
+  "createdAt": "2025-11-26",
+  "license": "MIT"
+}

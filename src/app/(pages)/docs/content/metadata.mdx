@@ -1,0 +1,337 @@
+# Metadata Guide
+
+Complete guide to creating valid `meta.json` files for your projects.
+
+## Overview
+
+Every project on **mstm.dev** requires a `meta.json` file that describes the project. This metadata is used for browsing, searching, and displaying your project.
+
+## Location
+
+```
+src/app/content/your-project-name/
+├── meta.json  ← Required
+└── page.tsx
+```
+
+## Complete Example
+
+```json
+{
+  "title": "Hex Forge",
+  "description": "Professional binary/hex editor in your browser with real-time inspector.",
+  "type": "tool",
+  "category": "development",
+  "tags": ["hex-editor", "binary", "file-analysis"],
+  "authors": ["rxxuzi"],
+  "featured": false,
+  "mobile": false,
+  "createdAt": "2025-11-24",
+  "license": "MIT"
+}
+```
+
+## Required Fields
+
+### title
+
+**Type:** `string`
+
+The display name of your project.
+
+**Rules:**
+- 3-50 characters recommended
+- Use proper capitalization
+- Be descriptive but concise
+
+**Examples:**
+- ✅ "Hex Forge"
+- ✅ "Queens"
+- ✅ "Logic Gate Simulator"
+- ❌ "Tool" (too generic)
+- ❌ "My Amazing Super Cool Project" (too long)
+
+---
+
+### description
+
+**Type:** `string`
+
+A brief description of what your project does.
+
+**Rules:**
+- 100-200 characters recommended
+- One or two complete sentences
+- Focus on functionality, not marketing
+- End with a period
+
+**Examples:**
+- ✅ "Professional binary/hex editor in your browser with real-time inspector."
+- ✅ "Build logic circuits to match target binary outputs using various gates."
+- ❌ "This is a tool" (too vague)
+- ❌ "The best, most amazing tool you've ever seen!!!" (marketing fluff)
+
+---
+
+### type
+
+**Type:** `"tool" | "art" | "game" | "other"`
+
+The primary category of your project.
+
+**Options:**
+
+**tool** - Utilities and applications
+- Editors, converters, analyzers
+- Developer tools
+- Productivity apps
+
+**game** - Interactive games
+- Puzzles and brain teasers
+- Arcade games
+- Simulations
+
+**art** - Creative and visual
+- Generative art
+- Interactive visualizations
+- Experimental projects
+
+**other** - Everything else
+- Educational content
+- Demos and experiments
+- Uncategorizable projects
+
+---
+
+### category
+
+**Type:** `string`
+
+A more specific classification within the type.
+
+**Common categories:**
+
+**For tools:**
+- `development` - Developer tools
+- `audio` - Audio processing
+- `utility` - General utilities
+- `image` - Image editors
+- `text` - Text processing
+
+**For games:**
+- `puzzle` - Logic puzzles
+- `arcade` - Action games
+- `strategy` - Strategy games
+
+**For art:**
+- `generative` - Algorithmic art
+- `visual` - Visual experiments
+- `interactive` - Interactive art
+
+---
+
+### tags
+
+**Type:** `string[]` (array of strings)
+
+Keywords for search and filtering.
+
+**Rules:**
+- 3-7 tags recommended
+- Use lowercase
+- Use hyphens for multi-word tags
+- Be specific and relevant
+
+**Examples:**
+```json
+"tags": ["hex-editor", "binary", "file-analysis"]
+"tags": ["puzzle", "logic", "n-queens", "chess"]
+"tags": ["music", "drums", "sequencer", "808"]
+```
+
+---
+
+### authors
+
+**Type:** `string[]` (array of strings)
+
+Array of contributor usernames.
+
+**Rules:**
+- Must have at least one author
+- Use GitHub usernames
+- List primary author first
+
+**Examples:**
+```json
+"authors": ["rxxuzi"]
+"authors": ["alice", "bob"]
+```
+
+---
+
+### mobile
+
+**Type:** `boolean`
+
+Whether the project works well on mobile devices.
+
+**true** - Mobile-friendly
+- Responsive design
+- Touch interactions work
+- No keyboard required
+
+**false** - Desktop only
+- Complex UI
+- Keyboard required
+- Not optimized for mobile
+
+**Testing:** Always test on an actual mobile device if setting to `true`.
+
+---
+
+### createdAt
+
+**Type:** `string`
+
+The date when the project was created.
+
+**Format:** `yyyy-mm-dd`
+
+**Examples:**
+```json
+"createdAt": "2025-11-26"
+"createdAt": "2025-01-15"
+```
+
+❌ Wrong formats:
+```json
+"createdAt": "11/26/2025"
+"createdAt": "2025-11-26T00:00:00Z"
+"createdAt": "Nov 26, 2025"
+```
+
+---
+
+## Optional Fields
+
+### featured
+
+**Type:** `boolean`
+**Default:** `false`
+
+Whether the project should be featured on the homepage.
+
+**Note:** Set to `false` for all new projects. Maintainers may feature exceptional projects after review.
+
+---
+
+### updatedAt
+
+**Type:** `string`
+**Format:** `yyyy-mm-dd`
+
+The date when the project was last significantly updated.
+
+**When to update:**
+- Major feature additions
+- Significant redesigns
+- Breaking changes
+
+**Don't update for:**
+- Minor bug fixes
+- Small tweaks
+- Documentation updates
+
+---
+
+### license
+
+**Type:** `string`
+**Default:** `"MIT"`
+
+The license under which your project is released.
+
+**Common licenses:**
+- `MIT` - Most permissive (recommended)
+- `Apache-2.0` - Patent protection
+- `GPL-3.0` - Copyleft
+
+---
+
+## Validation
+
+Before submitting, validate your metadata:
+
+```bash
+npm run collect
+```
+
+This command checks all `meta.json` files and reports errors.
+
+**Common errors:**
+
+❌ Missing required field
+```
+Invalid meta.json (missing required fields)
+```
+
+❌ Invalid type
+```
+Invalid type "invalid-type"
+```
+
+❌ Empty authors array
+```
+authors must be a non-empty array
+```
+
+❌ Wrong date format
+```
+createdAt must be in yyyy-mm-dd format
+```
+
+## Complete Schema
+
+```json
+{
+  "title": "string (required)",
+  "description": "string (required)",
+  "type": "tool|art|game|other (required)",
+  "category": "string (required)",
+  "tags": ["string", "..."] (required, 3-7 recommended),
+  "authors": ["string", "..."] (required, non-empty),
+  "mobile": boolean (required),
+  "createdAt": "yyyy-mm-dd (required)",
+  "featured": boolean (optional, default: false),
+  "updatedAt": "yyyy-mm-dd (optional)",
+  "license": "string (optional, default: MIT)"
+}
+```
+
+## Tips
+
+### Choose Good Tags
+
+Think about what users would search for:
+- Technology used: `react`, `canvas`, `webgl`
+- Domain: `music`, `image`, `binary`
+- Functionality: `editor`, `converter`, `analyzer`
+
+### Write Clear Descriptions
+
+Focus on what the project **does**, not what it **is**:
+- ✅ "Edit binary files with real-time hex viewer"
+- ❌ "A hex editor"
+
+### Test Thoroughly
+
+Before submitting:
+1. Run `npm run collect` - No errors
+2. Visit your project - Works correctly
+3. Check mobile if `mobile: true`
+4. No console errors
+
+---
+
+**Need help?** Check existing projects' `meta.json` files for reference or ask on [GitHub](https://github.com/rxxuzi/mstm.dev/issues).

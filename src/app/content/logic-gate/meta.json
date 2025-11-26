@@ -1,0 +1,12 @@
+{
+  "title": "Logic Gate",
+  "description": "Build logic circuits to match target binary outputs. Chain AND, OR, XOR, NAND, NOR, and NOT gates to transform inputs. Features three difficulty levels with increasingly complex circuits.",
+  "type": "game",
+  "category": "puzzle",
+  "tags": ["logic", "puzzle", "circuit", "binary", "gates", "programming", "boolean"],
+  "authors": ["rxxuzi"],
+  "featured": true,
+  "mobile": true,
+  "createdAt": "2025-11-25",
+  "license": "MIT"
+}

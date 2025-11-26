@@ -1,0 +1,12 @@
+{
+  "title": "jackson-pollock",
+  "description": "Experimental drip painting canvas inspired by Jackson Pollock. Slow movements create thick strokes, fast movements create thin lines. Holding still causes ink to pool and bleed organically. Features customizable brush size, ink flow, and color palette.",
+  "type": "art",
+  "category": "creative",
+  "tags": ["art", "painting", "generative", "abstract", "expressionism", "drip", "canvas", "experimental"],
+  "authors": ["rxxuzi"],
+  "featured": true,
+  "mobile": true,
+  "createdAt": "2025-11-26",
+  "license": "MIT"
+}

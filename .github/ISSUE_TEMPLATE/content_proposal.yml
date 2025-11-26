@@ -1,0 +1,38 @@
+name: Content Proposal
+description: Propose a new content project
+title: "[Content]: "
+labels: ["content", "proposal"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Project Title
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does this project do?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - tool
+        - art
+        - game
+        - other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: mobile
+    attributes:
+      label: Mobile Support
+      options:
+        - label: This project will be mobile-responsive
